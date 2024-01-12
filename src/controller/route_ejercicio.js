@@ -1,13 +1,13 @@
 const Ejercicio = require('../models/model_ejercicio');
 
-// agregar usuario
+// agregar ejercicio
 const addEjercicio = async (req, res) => {
 
-  const { nombre, series, repeticiones, kilogramos, imagen } = req.body;
+  const { nombre, tipo, imagen } = req.body;
 
   try {
 
-    const ejercicio = new Ejercicio({ nombre, series, repeticiones, kilogramos, imagen });
+    const ejercicio = new Ejercicio({ nombre, tipo, imagen });
 
     const savedEjercicio = await ejercicio.save();
 

@@ -2,9 +2,7 @@ const { Schema, model } = require("mongoose");
 
 const Ejercicio = new Schema({
   nombre: { type: String, required: true },
-  series: { type: Number, required: true },
-  repeticiones: { type: Number, required: true },
-  kilogramos: { type: Number, required: true },
+  tipo: { type: String, required: true},
   imagen: { type: String }
 });
 
